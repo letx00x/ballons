@@ -1,0 +1,18 @@
+@mixin style-link($color)
+   position: relative  
+   text-decoration: none
+   color:$color  
+   display: inline-block
+
+@mixin clearfix
+   &::after
+      content:''
+      display: table
+      clear: both   
+
+@mixin text-16px   
+   font-weight: 400
+   font-size: $font-size-paragraph
+   line-height: 19px
+   letter-spacing: 2px
+   color: $color-gray

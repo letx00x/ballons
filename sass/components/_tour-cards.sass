@@ -1,0 +1,101 @@
+.card-tour   
+   height: 50rem   
+   perspective: 150rem
+   -webkit-perspective: 150rem
+   -moz-perspective: 150rem
+   position: relative     
+   &__side
+      height: 50rem
+      transition: 0.8s all ease-out
+      top:0
+      left: 0
+      width: 100%
+      backface-visibility: hidden
+      box-shadow: $shadow-h2  
+      position: absolute
+      border-radius: .5rem
+      overflow: hidden 
+      &_front
+         background-color: $color-white         
+      &_back
+         background: linear-gradient(120deg, $color-brown-light, $color-brown-dark)
+         transform: rotateY(180deg)
+
+   &:hover &__side_front
+      transform: rotateY(-180deg)      
+   &:hover &__side_back
+      transform: rotateY(0deg)
+   
+   &__img  
+      background-blend-mode: hard-light
+      height: 21rem      
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%) 
+      &_1
+         background: $color-brown-light url(../img/popular-1.jpg) center / cover no-repeat      
+      &_2
+         background: $color-brown-light url(../img/popular-2.jpg) center / cover no-repeat      
+      &_3
+         background: $color-brown-light url(../img/popular-3.jpg) center / cover no-repeat      
+   &__title
+      position: absolute 
+      font-weight: 300
+      font-size: 2.8rem
+      line-height: 3.4rem      
+      letter-spacing: .2rem
+      color: $color-white      
+      text-transform: uppercase
+      text-align: right
+      right: 0
+      top:17rem
+   &__span
+      background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
+      padding: 1rem 2rem .3rem 2rem
+         
+      &_2
+         position: absolute
+         top: 3.4rem
+         right: 0 
+         padding-bottom: 1rem 
+         padding-top: 0 
+
+   &__descr      
+      ul
+         list-style: none
+         margin: 0 auto
+         width: 80%
+         text-align: center
+         li            
+            font-weight: 700
+            font-size: $font-size-paragraph
+            line-height: 1.9rem
+            letter-spacing: .2rem
+            border-bottom: 1px solid $color-gray
+            color: $color-gray            
+            display: inline-block
+            &:not(:last-child)
+               margin-bottom: 2rem
+
+   &__backSide-box
+      position: absolute
+      top:50%
+      left:50%
+      transform: translate(-50%, -50%)
+   &__text      
+      color: $color-white
+      letter-spacing: .2rem
+      text-align: center 
+      text-transform: uppercase
+      margin-bottom: 8.7rem
+
+      &-title
+         font-weight: 300
+         font-size: $font-size-paragraph
+         line-height: 1.9rem
+      &-price
+         font-weight: 500
+         font-size: 6rem
+         line-height: 7.2rem        
+         
+         
+         
+   
